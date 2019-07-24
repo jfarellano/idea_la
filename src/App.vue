@@ -11,4 +11,8 @@ export default {
 }
 </script>
 <style>
+*{
+  font-family: "Times New Roman", Times, serif;
+  color: #4d4d4d;
+}
 </style>
