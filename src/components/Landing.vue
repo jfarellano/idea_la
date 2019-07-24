@@ -5,7 +5,8 @@ div.container-fluid.main
 		div.col-md-10.align-self-center
 			div.out-box
 				div.in-box.container-fluid
-					img.bulb(src="../assets/bulb.svg")
+					div.bulb
+						img(src="../assets/bulb.svg")
 					div.row.align-items-center
 						div.col
 							img(src="../assets/logo.svg" )
@@ -82,14 +83,17 @@ export default {
     background-color: white;
     .in-box {
       height: 100%;
-      border: 3px solid black;
+      border: 1.5px solid black;
 			position: relative;
 			.bulb{
-				z-index: 1000;
 				position: absolute;
 				left: 50px;
-				bottom: -3px;
-				width: 80px;
+				bottom: -1.5px;
+				img{
+					position:relative;
+					width: 80px;
+					z-index: 1000;
+				}
 			}
       .row {
         height: 100%;
@@ -105,14 +109,15 @@ export default {
     .image {
       position: relative;
       img {
+				position: relative;
         width: 350px;
 				z-index: 1000;
       }
       .line {
         position: absolute;
-        bottom: 32px;
+        bottom: 33px;
         left: -1000px;
-        height: 3px;
+        height: 2px;
         background-color: #4d4d4d;
         width: 100000px;
       }
