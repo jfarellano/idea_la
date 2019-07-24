@@ -10,9 +10,12 @@ export default {
   }
 }
 </script>
+
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
 *{
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #4d4d4d;
 }
 </style>

@@ -10,15 +10,15 @@ div.container-fluid.main
 					div.row.align-items-center
 						div.col
 							img(src="../assets/logo.svg" )
-							h4 Tu lo imaginas, nosotros lo hacemos realidad
+							h4 Tú lo imaginas, nosotros lo hacemos realidad
 	section.row.justify-content-center.align-items-center.we
 		div.col-md-5
 			div.image
 				img(src='../assets/people.svg')
 				div.line
 		div.col-md-7
-			h2 Todos para uno y uno para todos
-			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+			h1 Todos para uno y uno para todos
+			p Somos un equipo conformado por 4 estudiantes de Ingeniería de Sistemas y Computación que se apasiona por las tecnologías y la forma en la que nos permiten llevar a cabo una idea de cero a cien. Nos entusiasma el desarrollo, el trabajo en equipo y las ganas de aprender cada días más para poder hacer realidad lo que tienes en mente
 	section.row.justify-content-end.products
 		div.scroller(@click="scrollSide()")
 			img(src='../assets/arrow.svg')
@@ -122,10 +122,10 @@ export default {
         width: 100000px;
       }
     }
-    h2 {
+    h1 {
       font-weight: bold;
     }
-    h2,
+    h1,
     p {
       padding-right: 20px;
       direction: rtl;
