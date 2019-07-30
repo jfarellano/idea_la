@@ -17,8 +17,8 @@ div.container-fluid.main
 				img(src='../assets/people.svg')
 				div.line
 		div.col-md-7
-			h1 Todos para uno y uno para todos
-			p Somos un equipo conformado por 4 estudiantes de Ingeniería de Sistemas y Computación que se apasiona por las tecnologías y la forma en la que nos permiten llevar a cabo una idea de cero a cien. Nos entusiasma el desarrollo, el trabajo en equipo y las ganas de aprender cada días más para poder hacer realidad lo que tienes en mente
+			h2 Todos para uno y uno para todos
+			p Somos un grupo de desarrollo conformado por <a target='_blank' href='https://github.com/jfarellano'>Juan Arellano</a>, <a target='_blank' href='https://github.com/JohnDBR'>John Barbosa</a>, <a target='_blank' href='https://github.com/aconchatorres'>Andrés Concha</a> y <a target='_blank' href='https://github.com/onailimixam'>Max García</a>. Compañeros desde hace cuatro años en la universidad y proyectos. Nos especializamos en desarrollo Web y Android siempre buscando llevar las mejores practicas y las tecnologías mas modernas para brindar soluciones a tus ideas
 	section.row.justify-content-end.products
 		div.scroller(@click="scrollSide()")
 			img(src='../assets/arrow.svg')
@@ -27,36 +27,44 @@ div.container-fluid.main
 				div.row.flex-row.flex-nowrap
 					div.info.col.align-self-center
 						h3 Nuestro Trabajo
-						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod aliquam erat volutpat.
+						p Estos son algunos proyectos en los que los miembros del grupo han trabajado
 					div.product-card.col
 						div.container-fluid
 							div.row.image
-								img(src='https://via.placeholder.com/280x150')
+								img(src='../assets/projects/ciuda.png')
 							div.row.data
 								div.col
-									h5 Nombre del producto
-									p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-									button Conoce este proyecto
+									h5 Imagina tu Ciudá
+									p Se Desarrollo una aplicación web para la Cámara de Comercio de Barranquilla la cual busca la participación ciudadana mediante un espacio de co-creación entre ciudadanía y gobernantes. Esta plataforma fue desarrollada en Vue.JS y Ruby on Rails 
+									button(@click="toSite('ciuda')") Conoce este proyecto
 					div.product-card.col
 						div.container-fluid
 							div.row.image
-								img(src='https://via.placeholder.com/280x150')
+								img(src='../assets/projects/nomit.png')
 							div.row.data
 								div.col
-									h5 Nombre del producto
-									p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-									button Conoce este proyecto
+									h5 Nomit
+									p NOMIT te conecta a la comunidad de conductores de tu ciudad. Con esta aplicación estás SIEMPRE informado de lo que está pasando en las vías. John hizo parte del equipo de desarrollo de esta aplicación Android.
+									button(@click="toSite('nomit')") Conoce este proyecto
 					div.product-card.col
 						div.container-fluid
 							div.row.image
-								img(src='https://via.placeholder.com/280x150')
+								img(src='../assets/projects/litivo.png')
 							div.row.data
 								div.col
-									h5 Nombre del producto
-									p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-									button Conoce este proyecto
+									h5 Litivo
+									p Litivo es una aplicación web en la cual la ciudadanía puede ejercer procesos de conciliación y de insolvencia mediante la Fundación Liborio Mejía de manera totalmente digital y llevando todas las constancias de los procesos en la plataforma. Juan hizo parte del equipo de desarrollo del front-end de esta aplicación en Angular.js
+									button(@click="toSite('litivo')") Conoce este proyecto
+					div.product-card.col
+						div.container-fluid
+							div.row.image
+								img(src='../assets/projects/pasuu.png')
+							div.row.data
+								div.col
+									h5 Pasuu
+									p Pasuu te brinda información de por donde puedes desplazarte con menor probabilidad de hurto en zonas que no conoces. En el equipo de desarrollo de esta app Android John hizo parte
+									button(@click="toSite('pasuu')") Conoce este proyecto
 					div.separator.col 
-	
 </template>
 
 <script>
@@ -65,7 +73,25 @@ export default {
     scrollSide() {
       let content = document.querySelector(".list-container");
       content.scrollLeft += 40;
-		}
+    },
+    toSite(name){
+      switch (name) {
+        case 'ciuda':
+          window.open('https://www.imaginatuciuda.org','_blank');
+          break;
+        case 'nomit':
+          window.open('https://play.google.com/store/apps/details?id=nomit.mobile.android&hl=en', '_blank')
+          break;
+        case 'litivo':
+          window.open('https://www.litivo.com', '_blank')
+					break;
+				case 'pasuu':
+          window.open('https://play.google.com/store/apps/details?id=pasuu.pasuu.android&hl=en', '_blank')
+          break;
+        default:
+          break;
+      }
+    }
   }
 };
 </script>
@@ -84,17 +110,17 @@ export default {
     .in-box {
       height: 100%;
       border: 1.5px solid black;
-			position: relative;
-			.bulb{
-				position: absolute;
-				left: 50px;
-				bottom: -1.5px;
-				img{
-					position:relative;
-					width: 80px;
-					z-index: 1000;
-				}
-			}
+      position: relative;
+      .bulb {
+        position: absolute;
+        left: 50px;
+        bottom: -1.5px;
+        img {
+          position: relative;
+          width: 80px;
+          z-index: 1000;
+        }
+      }
       .row {
         height: 100%;
         img {
@@ -109,9 +135,9 @@ export default {
     .image {
       position: relative;
       img {
-				position: relative;
+        position: relative;
         width: 350px;
-				z-index: 1000;
+        z-index: 1000;
       }
       .line {
         position: absolute;
@@ -125,7 +151,15 @@ export default {
     h1 {
       font-weight: bold;
     }
+<<<<<<< HEAD
     h1,
+=======
+    a {
+      color: #4d4d4d;
+      font-weight: bold;
+    }
+    h2,
+>>>>>>> 3b65269b82030d06a097ab20e07aa23959232e81
     p {
       padding-right: 20px;
       direction: rtl;
@@ -136,14 +170,14 @@ export default {
     position: relative;
     .scroller {
       z-index: 1000;
-			background-color: #ffe01b;
+      background-color: #ffe01b;
       position: absolute;
       right: 0px;
       top: 50%;
-			padding: 3px 10px;
-			img{
-				width: 70px;
-			}
+      padding: 3px 10px;
+      img {
+        width: 70px;
+      }
     }
     .list-container {
       overflow-x: auto;
@@ -156,12 +190,12 @@ export default {
         width: 150px;
         margin: 0px 30px;
       }
-			.separator{
-				display: inline-block;
-				background-color: white;
-				width: 300px;
-				height: 200px;
-			}
+      .separator {
+        display: inline-block;
+        background-color: white;
+        width: 300px;
+        height: 200px;
+      }
       .product-card {
         display: inline-block;
         padding: 0px;
@@ -169,11 +203,14 @@ export default {
         width: 280px;
         height: 350px;
         border: 2px #4d4d4d solid;
-				&:last-of-type{
-					margin-right: 150px;
-				}
+        &:last-of-type {
+          margin-right: 150px;
+        }
         .data {
           padding: 10px;
+          h5{
+            color: black;
+          }
           p {
             font-size: 10px;
             text-align: justify;
