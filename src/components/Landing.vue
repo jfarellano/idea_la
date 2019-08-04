@@ -64,7 +64,28 @@ div.container-fluid.main
 									h5 Pasuu
 									p Pasuu te brinda información de por donde puedes desplazarte con menor probabilidad de hurto en zonas que no conoces. En el equipo de desarrollo de esta app Android John hizo parte
 									button(@click="toSite('pasuu')") Conoce este proyecto
-					div.separator.col 
+					div.separator.col
+
+	div.row.contact-section
+		div.col(align="center")
+			h1 Contacto
+			b-form(method="POST" action="https://formspree.io/info@idea-la.com")
+				b-input.input-field(type="text" name="name" placeholder="Nombre")
+				b-input.input-field(type="email" name="email" placeholder="Correo")
+				b-input.input-field(type="text" name="company" placeholder="Compañía")
+				b-textarea.input-field(name="message" placeholder="Mensaje")
+				b-button.send-button(type="submit") Enviar
+
+	//- div.row.contact-section
+	//- 	div.col.text-center(align="center")
+	//- 		h1.contact-title Contacto
+	//- 		div.center-form(align-self="center")
+	//- 			b-form(method="POST" action="https://formspree.io/info@idea-la.com")
+	//- 				b-input.input-field(type="text" name="name" placeholder="Nombre")
+	//- 				b-input.input-field(type="email" name="email" placeholder="Correo")
+	//- 				b-input.input-field(type="text" name="company" placeholder="Compañía")
+	//- 				b-textarea.input-field(name="message" placeholder="Mensaje")
+	//- 				b-button.send-button(type="submit") Enviar
 </template>
 
 <script>
@@ -102,6 +123,13 @@ export default {
   section {
     min-height: 70vh;
   }
+	.contact-section {
+		padding-bottom: 20px;
+		.input-field {
+			width: 700px;
+			margin-bottom: 10px;
+		}
+	}
   .out-box {
     height: 50vh;
     padding: 10px;
@@ -178,7 +206,7 @@ export default {
     .list-container {
       overflow-x: auto;
       background-color: white;
-      height: 400px;
+      height: 440px;
       padding: 25px 0px;
       .info.col {
         flex-grow: unset;
@@ -197,7 +225,7 @@ export default {
         padding: 0px;
         margin: 0px 10px;
         width: 280px;
-        height: 350px;
+        height: 400px;
         border: 2px #4d4d4d solid;
         &:last-of-type {
           margin-right: 150px;
