@@ -65,6 +65,8 @@ div.container-fluid.main
 									p Pasuu te brinda información de por donde puedes desplazarte con menor probabilidad de hurto en zonas que no conoces. En el equipo de desarrollo de esta app Android John hizo parte
 									button(@click="toSite('pasuu')") Conoce este proyecto
 					div.separator.col 
+	section.row.justify-content-end.products
+		h1 prueba
 </template>
 
 <script>
