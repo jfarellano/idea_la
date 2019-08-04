@@ -20,8 +20,8 @@ div.container-fluid.main
 			h2 Todos para uno y uno para todos
 			p Somos un grupo de desarrollo conformado por <a target='_blank' href='https://github.com/jfarellano'>Juan Arellano</a>, <a target='_blank' href='https://github.com/JohnDBR'>John Barbosa</a>, <a target='_blank' href='https://github.com/aconchatorres'>Andrés Concha</a> y <a target='_blank' href='https://github.com/onailimixam'>Max García</a>. Compañeros desde hace cuatro años en la universidad y proyectos. Nos especializamos en desarrollo Web y Android siempre buscando llevar las mejores practicas y las tecnologías mas modernas para brindar soluciones a tus ideas
 	section.row.justify-content-end.products
-		div.scroller(@click="scrollSide()")
-			img(src='../assets/arrow.svg')
+		//- div.scroller(@click="scrollSide()")
+		//- 	img(src='../assets/arrow.svg')
 		div.col-11.align-self-center(style="padding-right: 0px;")
 			div.list-container.container-fluid
 				div.row.flex-row.flex-nowrap
@@ -75,17 +75,7 @@ div.container-fluid.main
 				b-input.input-field(type="text" name="company" placeholder="Compañía")
 				b-textarea.input-field(name="message" placeholder="Mensaje")
 				b-button.send-button(type="submit") Enviar
-
-	//- div.row.contact-section
-	//- 	div.col.text-center(align="center")
-	//- 		h1.contact-title Contacto
-	//- 		div.center-form(align-self="center")
-	//- 			b-form(method="POST" action="https://formspree.io/info@idea-la.com")
-	//- 				b-input.input-field(type="text" name="name" placeholder="Nombre")
-	//- 				b-input.input-field(type="email" name="email" placeholder="Correo")
-	//- 				b-input.input-field(type="text" name="company" placeholder="Compañía")
-	//- 				b-textarea.input-field(name="message" placeholder="Mensaje")
-	//- 				b-button.send-button(type="submit") Enviar
+        
 </template>
 
 <script>
@@ -126,9 +116,13 @@ export default {
 	.contact-section {
 		padding-bottom: 20px;
 		.input-field {
-			width: 700px;
+			max-width: 700px;
 			margin-bottom: 10px;
 		}
+    .send-button {
+      width: 100px;
+      background-color: black
+    }
 	}
   .out-box {
     height: 50vh;
