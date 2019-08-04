@@ -179,15 +179,7 @@ export default {
     h1 {
       font-weight: bold;
     }
-<<<<<<< HEAD
     h1,
-=======
-    a {
-      color: #4d4d4d;
-      font-weight: bold;
-    }
-    h2,
->>>>>>> 3b65269b82030d06a097ab20e07aa23959232e81
     p {
       padding-right: 20px;
       direction: rtl;
