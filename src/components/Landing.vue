@@ -146,7 +146,7 @@ export default {
       .row {
         height: 100%;
         img {
-          width: 350px;
+          width: 60%;
         }
       }
     }
@@ -170,14 +170,18 @@ export default {
         width: 100000px;
       }
     }
-    h1 {
+    h2 {
       font-weight: bold;
     }
-    h1,
+    h2,
     p {
       padding-right: 20px;
       direction: rtl;
       text-align: justify;
+    }
+    a{
+      color: #4d4d4d;
+      font-weight: bold;
     }
   }
   .products {
